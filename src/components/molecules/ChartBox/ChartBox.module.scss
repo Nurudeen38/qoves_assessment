@@ -1,0 +1,28 @@
+@use '@/src/styles/abstracts/variables' as *;
+@use '@/src/styles/abstracts/mixins' as *;
+
+.chartBox {
+  background: rgba($color-bg-primary, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba($color-border, 0.4);
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+  &__header {
+    @include flex(row, space-between, center);
+    margin-bottom: $spacing-sm;
+
+    &-title {
+      font-size: $font-size-xs;
+      color: $color-text-secondary;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__container {
+    height: 80px;
+    width: 160px;
+  }
+}

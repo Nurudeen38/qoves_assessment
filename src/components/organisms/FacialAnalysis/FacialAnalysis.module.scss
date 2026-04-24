@@ -1,0 +1,84 @@
+@use '@/src/styles/abstracts/variables' as *;
+@use '@/src/styles/abstracts/mixins' as *;
+
+.analysis {
+  padding-top: 60px;
+  background: linear-gradient(180deg, #9caaa8 0%, #768a8a 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__badge {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: $radius-full;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 4vw + 1rem, 48px) !important;
+    font-weight: 300 !important;
+    color: $color-bg-primary !important;
+    margin-bottom: $spacing-md;
+    letter-spacing: -0.01em;
+  }
+
+  &__titleLight {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__subtitle {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  &__br {
+    display: none;
+    @include respond-to('md') { display: block; }
+  }
+
+  &__board {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    @include flex(column, flex-end, center);
+    height: 500px;
+    
+    @include respond-to('md') {
+      height: 600px;
+    }
+  }
+
+  &__features {
+    position: absolute;
+    width: 120%;
+    max-width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    object-fit: contain;
+
+    @include respond-to('md') {
+      width: 100%;
+      top: 40%;
+    }
+  }
+
+  &__portrait {
+    position: relative;
+    z-index: 2;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom;
+  }
+}

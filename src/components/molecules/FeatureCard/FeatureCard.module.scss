@@ -1,0 +1,42 @@
+@use '@/src/styles/abstracts/variables' as *;
+@use '@/src/styles/abstracts/mixins' as *;
+
+.featureCard {
+  @include flex(column, space-between, flex-start);
+  text-align: left;
+  padding: $spacing-md;
+  background-color: $color-bg-primary;
+  border: 1px solid $color-border-primary-muted;
+  border-radius: $radius-lg;
+  width: 100%;
+  min-height: 150px;
+  transition: $transition-base;
+  
+  &__icon {
+    @include flex(row, center, center);
+
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #8fa0a3;
+    color: $color-bg-primary;
+    font-size: 11px;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-xl;
+    flex-shrink: 0;
+  }
+
+  &__activeText {
+    color: $color-bg-primary !important;
+  }
+
+  &--active {
+    background: linear-gradient(135deg, #9caaa8 0%, #768a8a 100%);
+    border-color: transparent;
+    box-shadow: 0 10px 25px -5px rgba(118, 138, 138, 0.4);
+
+    .featureCard__icon {
+      background-color: rgba($color-bg-primary, 0.3);
+    }
+  }
+}

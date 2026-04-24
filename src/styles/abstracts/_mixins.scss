@@ -1,0 +1,42 @@
+@use '@/src/styles/abstracts/variables' as *;
+
+// Typography Mixins
+@mixin text-style($size: $font-size-base, $weight: $font-weight-regular, $color: $color-text-primary) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+// Media Queries
+@mixin respond-to($breakpoint) {
+  @if map-has-key((sm: $breakpoint-sm, md: $breakpoint-md, lg: $breakpoint-lg, xl: $breakpoint-xl), $breakpoint) {
+    @media (min-width: map-get((sm: $breakpoint-sm, md: $breakpoint-md, lg: $breakpoint-lg, xl: $breakpoint-xl), $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`.";
+  }
+}
+
+// Flexbox Mixin
+@mixin flex($flex-direction: row, $justify-content: flex-start, $align-items: stretch) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// Standard Container
+@mixin container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $spacing-md;
+  padding-right: $spacing-md;
+
+  @include respond-to('md') {
+    padding-left: $spacing-xl;
+    padding-right: $spacing-xl;
+  }
+}

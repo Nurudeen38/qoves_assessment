@@ -1,0 +1,37 @@
+@use '@/src/styles/abstracts/variables' as *;
+@use '@/src/styles/abstracts/mixins' as *;
+
+.heading {
+  margin-top: 0;
+  margin-bottom: $spacing-md;
+  color: $color-text-primary;
+  
+  &--1 {
+    @include text-style($font-size-4xl, $font-weight-semibold);
+    letter-spacing: -0.02em;
+    @include respond-to('md') { font-size: $font-size-5xl; }
+  }
+  
+  &--2 {
+    @include text-style($font-size-3xl, $font-weight-medium);
+    @include respond-to('md') { font-size: $font-size-4xl; }
+  }
+  
+  &--3 {
+    @include text-style($font-size-2xl, $font-weight-medium);
+    @include respond-to('md') { font-size: $font-size-3xl; }
+  }
+}
+
+.text {
+  margin-top: 0;
+  margin-bottom: $spacing-sm;
+  color: $color-text-secondary;
+  line-height: 1.6;
+
+  &--lg { font-size: $font-size-lg; }
+  &--base { font-size: $font-size-base; }
+  &--sm { font-size: $font-size-sm; color: $color-text-muted; }
+  
+  &--center { text-align: center; }
+}

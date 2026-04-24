@@ -1,0 +1,37 @@
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "PP Neue Montreal", "Zagma Mono", Arial, Helvetica, sans-serif;
+  background-color: $color-bg-primary;
+  color: $color-text-primary;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Ensure Recharts look okay
+.recharts-wrapper {
+  font-family: inherit;
+}

@@ -1,0 +1,48 @@
+@use '@/src/styles/abstracts/variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-xl;
+  border-radius: $radius-full;
+  font-family: inherit;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: $transition-base;
+  border: 1px solid transparent;
+
+  &--primary {
+    background-color: $color-text-primary;
+    color: $color-bg-primary;
+
+    &:hover {
+      background-color: $color-text-secondary;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $color-text-primary;
+    border-color: $color-border;
+
+    &:hover {
+      background-color: $color-bg-secondary;
+    }
+  }
+
+  &--accent {
+    background-color: $color-accent;
+    color: $color-bg-primary;
+
+    &:hover {
+      background-color: $color-accent-hover;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,236 @@
+@use '@/src/styles/abstracts/variables' as *;
+@use '@/src/styles/abstracts/mixins' as *;
+
+.footerCta {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  
+  &__bgImage {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    filter: blur(28px) brightness(0.6) opacity(0.8);
+    transform: scale(1.15); // Prevent blurry edges bleeding
+    z-index: 0;
+  }
+
+  &__bgOverlay {
+    position: absolute;
+    inset: 0;
+    // creating a rich dark brownish/slate overlay to mimic the screenshot
+    background: linear-gradient(180deg, rgba(60, 50, 45, 0.4) 0%, rgba(30, 25, 20, 0.8) 100%);
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    @include container;
+    padding-top: $spacing-6xl;
+    padding-bottom: $spacing-6xl;
+  }
+}
+
+// Top Section
+.topSection {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4xl;
+}
+
+.introBlock {
+  max-width: 500px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  margin-bottom: $spacing-lg;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: $spacing-md;
+}
+
+.titleAccent {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  
+  @include respond-to('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureCard {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &__imgWrapper {
+    width: 100px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: $spacing-xl;
+    background: rgba(0,0,0,0.2); 
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  margin: $spacing-6xl 0;
+}
+
+// Bottom Section
+.bottomSection {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3xl;
+  position: relative;
+  
+  @include respond-to('md') {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 500px;
+  }
+}
+
+.centerBlock {
+  text-align: center;
+  max-width: 440px;
+  margin: 0 auto;
+  z-index: 2;
+
+  @include respond-to('md') {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.titleBottom {
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: $spacing-md;
+}
+
+.titleAccentBottom {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 52px; // Make "about your appearance" slightly larger as seen in design
+}
+
+.descriptionBottom {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.sideCardLeft, .sideCardRight {
+  z-index: 3;
+  width: 100%;
+  @include respond-to('md') {
+    width: 340px;
+  }
+}
+
+.sideCardLeft {
+  @include respond-to('md') {
+    align-self: flex-start;
+  }
+}
+
+.sideCardRight {
+  @include respond-to('md') {
+    align-self: flex-end;
+    margin-top: 180px; // Stagger effect
+  }
+}
+
+.glassPanel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(28px);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+  &__title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: $spacing-xl;
+    line-height: 1.2;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}

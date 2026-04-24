@@ -1,0 +1,139 @@
+@use '@/src/styles/abstracts/variables' as *;
+@use '@/src/styles/abstracts/mixins' as *;
+
+.hero {
+  @include container;
+  padding-top: $spacing-2xl;
+  padding-bottom: $spacing-2xl;
+  text-align: center;
+  background-color: $color-bg-primary;
+
+  &__brand {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+    letter-spacing: 0.15em; // Wide spacing
+    color: #9AAEB5; // Muted teal looking color from image
+    margin-bottom: $spacing-lg;
+    padding: 8px 8px;
+    border: 2px solid $color-border-primary-muted;
+    border-radius: $radius-full;
+    background-color: transparent;
+  }
+
+  &__title {
+    font-size: 48px !important;
+    font-weight: 400 !important;
+    color: #2f3a3d !important; // Deep slate color from screenshot
+    line-height: 1.1;
+    margin-bottom: $spacing-lg;
+    letter-spacing: -0.01em; // Slight tight letter spacing seen on sleek thin fonts
+  }
+
+  &__titleAccent {
+    color: #8fa0a3; // The muted light teal for "Qoves plan"
+  }
+
+  &__subtitle {
+    margin-bottom: $spacing-2xl !important;
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    color: #5c6b6d !important;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  &__comparison {
+    position: relative;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-4xl;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond-to('md') {
+      display: block; // Detach from flexbox
+      max-width: 1012px; // Match exact SVG width
+      aspect-ratio: 1012 / 414; // Match SVG viewBox
+    }
+  }
+
+  &__comparisonSvgWrapper {
+    display: none;
+    @include respond-to('md') {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+    }
+  }
+
+  &__comparisonSvg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__comparisonSnake {
+    stroke-dasharray: 200 4000;
+    stroke-linecap: round;
+    animation: traceSnake 12s linear infinite;
+  }
+
+  @keyframes traceSnake {
+    from { stroke-dashoffset: 4000; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  &__imageBox {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2;
+    padding: 8px 10px;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+       border-radius: 20px;
+    }
+
+    @include respond-to('md') {
+      position: absolute;
+      top: 2.898%; // Precisely 12px down in a 414px high viewBox
+      width:21.5rem; // Precisely 311px wide in a 1012px wide viewBox
+      height: 94.396%; // Precisely 390.8px high in a 414px high viewBox
+
+      &:nth-child(2) {
+        left: 1%; // 28.5px in from left bound
+      }
+      
+      &:nth-child(3) {
+        left: 65%; // 672.5px in from left bound
+      }
+    }
+  }
+
+  &__features {
+    @include flex(column, space-between, flex-start);
+    gap: $spacing-md;
+    margin-left:102px;
+    margin-right:102px;
+    @include respond-to('md') {
+      flex-direction: row;
+      gap: $spacing-xl;
+    }
+  }
+}
