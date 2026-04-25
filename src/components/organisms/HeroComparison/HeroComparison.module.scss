@@ -10,13 +10,13 @@
 
   &__brand {
     display: inline-block;
-    font-size: $spacing-sm-md;
-    font-weight: $font-weight-regular;
+    padding: $spacing-xs-sm $spacing-md;
+    font-size: $font-size-xxs;
+    font-weight: $font-weight-medium;
     text-transform: uppercase;
     letter-spacing: 0.15em; // Wide spacing
     color: $color-teal-muted; // Muted teal looking color from image
     margin-bottom: $spacing-lg;
-    padding: $spacing-sm $spacing-sm;
     border: 2px solid $color-border-primary-muted;
     border-radius: $radius-full;
     background-color: transparent;
