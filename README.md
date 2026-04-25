@@ -1,8 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Qoves Assessment
+
+Understand your facial features and start your glow-up today with a proven action plan, no plastic surgery needed.
+
+This project is a Next.js web application built following Atomic Design principles and a Spec-Driven Development methodology. It features a modern, responsive, and highly interactive user interface designed to provide facial analysis insights.
+
+## Features
+
+- **Hero Comparison**: A pixel-perfect hero section featuring animated SVG tracking paths for an engaging comparison experience.
+- **Facial Analysis**: A detailed analysis section utilizing Recharts for data visualization.
+- **FAQ List**: A modern, nested accordion structure for frequently asked questions.
+- **Footer CTA**: A visually rich, glassmorphism-inspired call to action layout.
+- **Custom Cursor**: A custom cursor tracking ball for enhanced user interaction.
+
+## Architecture & Methodology
+
+The project structure is based on the **Atomic Design** methodology, ensuring a scalable and maintainable codebase:
+- **Atoms**: Basic building blocks.
+- **Molecules**: Groups of atoms functioning together.
+- **Organisms**: Complex UI sections composing molecules and atoms (e.g., `HeroComparison`, `FacialAnalysis`, `FAQList`, `FooterCTA`).
+
+Styles are built with **SCSS Modules**, utilizing centralized variables (`_variables.scss`) to avoid hardcoded values and maintain consistent design tokens across the application.
+
+## Technologies Used
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Library**: [React](https://reactjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: SCSS Modules
+- **Animations**: [GSAP](https://gsap.com/)
+- **Data Visualization**: [Recharts](https://recharts.org/)
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +50,13 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev`: Starts the local development server.
+- `npm run build`: Creates an optimized production build.
+- `npm run start`: Starts the application in production mode.
+- `npm run lint`: Runs ESLint to check for code quality and formatting issues.
