@@ -10,36 +10,36 @@
 
   &__brand {
     display: inline-block;
-    font-size: 12px;
+    font-size: $spacing-sm-md;
     font-weight: $font-weight-regular;
     text-transform: uppercase;
     letter-spacing: 0.15em; // Wide spacing
-    color: #9AAEB5; // Muted teal looking color from image
+    color: $color-teal-muted; // Muted teal looking color from image
     margin-bottom: $spacing-lg;
-    padding: 8px 8px;
+    padding: $spacing-sm $spacing-sm;
     border: 2px solid $color-border-primary-muted;
     border-radius: $radius-full;
     background-color: transparent;
   }
 
   &__title {
-    font-size: 48px !important;
+    font-size: $font-size-hero !important;
     font-weight: 400 !important;
-    color: #2f3a3d !important; // Deep slate color from screenshot
+    color: $color-slate-dark !important; // Deep slate color from screenshot
     line-height: 1.1;
     margin-bottom: $spacing-lg;
     letter-spacing: -0.01em; // Slight tight letter spacing seen on sleek thin fonts
   }
 
   &__titleAccent {
-    color: #8fa0a3; // The muted light teal for "Qoves plan"
+    color: $color-teal-light; // The muted light teal for "Qoves plan"
   }
 
   &__subtitle {
     margin-bottom: $spacing-2xl !important;
-    font-size: 18px !important;
+    font-size: 1.125rem !important; // 18px equivalent roughly
     font-weight: 300 !important;
-    color: #5c6b6d !important;
+    color: $color-slate-muted !important;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -98,16 +98,16 @@
     height: 380px;
     background-color: transparent;
     border-color: transparent;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     overflow: hidden;
     z-index: 2;
-    padding: 8px 10px;
+    padding: $spacing-sm 10px;
     
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-       border-radius: 20px;
+       border-radius: 1.25rem;
     }
 
     @include respond-to('md') {

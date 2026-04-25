@@ -48,18 +48,18 @@
 
 .badge {
   display: inline-block;
-  font-size: 10px;
+  font-size: $font-size-xsm;
   font-weight: 500;
   letter-spacing: 0.15em;
-  padding: 4px 12px;
+  padding: $spacing-xs $spacing-sm-md;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   margin-bottom: $spacing-lg;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .title {
-  font-size: 48px;
+  font-size: $font-size-hero;
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: $spacing-md;
@@ -70,7 +70,7 @@
 }
 
 .description {
-  font-size: 16px;
+  font-size: $font-size-base;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -89,8 +89,8 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(24px);
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: $spacing-md;
+  padding: $spacing-xl;
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
   
@@ -114,13 +114,13 @@
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 1.25rem; // 20px
     font-weight: 400;
     margin-bottom: $spacing-xs;
   }
 
   &__desc {
-    font-size: 14px;
+    font-size: $font-size-sm;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.5;
   }
@@ -163,7 +163,7 @@
 }
 
 .titleBottom {
-  font-size: 44px;
+  font-size: 2.75rem; // 44px
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: $spacing-md;
@@ -171,11 +171,11 @@
 
 .titleAccentBottom {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 52px; // Make "about your appearance" slightly larger as seen in design
+  font-size: 3.25rem; // 52px Make "about your appearance" slightly larger as seen in design
 }
 
 .descriptionBottom {
-  font-size: 13px;
+  font-size: 0.8125rem; // 13px
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.65);
   max-width: 400px;
@@ -207,12 +207,12 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(28px);
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: $spacing-md;
+  padding: $spacing-xl;
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 
   &__title {
-    font-size: 24px;
+    font-size: 1.5rem; // 24px
     font-weight: 400;
     margin-bottom: $spacing-xl;
     line-height: 1.2;
@@ -221,14 +221,14 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: $spacing-sm-md;
   }
 
   &__item {
     background: rgba(255, 255, 255, 0.12);
-    padding: 12px 16px;
+    padding: $spacing-sm-md $spacing-md;
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 0.8125rem; // 13px
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.4;
     font-weight: 400;

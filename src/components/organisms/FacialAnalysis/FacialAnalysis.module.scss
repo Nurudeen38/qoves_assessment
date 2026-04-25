@@ -2,8 +2,8 @@
 @use '@/src/styles/abstracts/mixins' as *;
 
 .analysis {
-  padding-top: 60px;
-  background: linear-gradient(180deg, #9caaa8 0%, #768a8a 100%);
+  padding-top: 3.75rem; // 60px
+  background: linear-gradient(180deg, $color-grad-analysis-start 0%, $color-grad-analysis-end 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,8 +12,8 @@
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: $radius-full;
-    padding: 6px 16px;
-    font-size: 11px;
+    padding: $spacing-xs-sm $spacing-md;
+    font-size: $font-size-xxs;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -21,7 +21,7 @@
   }
 
   &__title {
-    font-size: clamp(2.5rem, 4vw + 1rem, 48px) !important;
+    font-size: clamp(2.5rem, 4vw + 1rem, $font-size-hero) !important;
     font-weight: 300 !important;
     color: $color-bg-primary !important;
     margin-bottom: $spacing-md;
@@ -33,7 +33,7 @@
   }
 
   &__subtitle {
-    font-size: 16px !important;
+    font-size: $font-size-base !important;
     font-weight: 300 !important;
     color: rgba(255, 255, 255, 0.8) !important;
     line-height: 1.5;

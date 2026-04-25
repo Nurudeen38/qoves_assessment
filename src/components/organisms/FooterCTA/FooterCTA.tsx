@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
+
 import styles from '@/src/components/organisms/FooterCTA/FooterCTA.module.scss';
 import { useGsapAnimations } from '@/src/hooks/useGsapAnimations';
 import { IMAGES } from '@/src/constants/images';
@@ -35,7 +37,7 @@ export const FooterCTA: React.FC = () => {
       <div className={styles.footerCta__bgOverlay}></div>
 
       <div className={styles.footerCta__content} ref={ctaRef}>
-        
+
         {/* Top Section */}
         <div className={styles.topSection}>
           <div className={styles.introBlock}>
@@ -55,7 +57,7 @@ export const FooterCTA: React.FC = () => {
             <div className={styles.featureCard}>
               <div className={styles.featureCard__imgWrapper}>
                 {/* Fallback to patientBefore if lifestyleMale is missing locally */}
-                <img src={IMAGES.patientBefore} alt="Lifestyle factors" />
+                <Image width={200} height={200} src={IMAGES.lifestyleFactor} alt="Lifestyle factors" />
               </div>
               <h3 className={styles.featureCard__title}>Lifestyle factors</h3>
               <p className={styles.featureCard__desc}>Considers diet, climate, stress, sleep, and habits.</p>
@@ -63,7 +65,7 @@ export const FooterCTA: React.FC = () => {
 
             <div className={styles.featureCard}>
               <div className={styles.featureCard__imgWrapper}>
-                <img src={IMAGES.facialAnalysis} alt="Cultural beauty standards" />
+                <Image width={200} height={200} src={IMAGES.beautyStandard} alt="Cultural beauty standards" />
               </div>
               <h3 className={styles.featureCard__title}>Cultural beauty standards</h3>
               <p className={styles.featureCard__desc}>Adapts to regional and societal ideals.</p>
@@ -71,7 +73,7 @@ export const FooterCTA: React.FC = () => {
 
             <div className={styles.featureCard}>
               <div className={styles.featureCard__imgWrapper}>
-                <img src={IMAGES.facialAnalysisFeatures} alt="Genetic factors" />
+                <Image width={200} height={200} src={IMAGES.beautyFactor} alt="Genetic factors" />
               </div>
               <h3 className={styles.featureCard__title}>Genetic factors</h3>
               <p className={styles.featureCard__desc}>Takes into account genetic factors and how they might impact your facial aesthetics.</p>
@@ -83,7 +85,7 @@ export const FooterCTA: React.FC = () => {
 
         {/* Bottom Section */}
         <div className={styles.bottomSection}>
-          
+
           <div className={styles.sideCardLeft}>
             <div className={styles.glassPanel}>
               <h3 className={styles.glassPanel__title}>Consider this...</h3>
@@ -97,7 +99,7 @@ export const FooterCTA: React.FC = () => {
 
           <div className={styles.centerBlock}>
             <h2 className={styles.titleBottom}>
-               Is it vain to care <br />
+              Is it vain to care <br />
               <span className={styles.titleAccentBottom}>about your appearance?</span>
             </h2>
             <p className={styles.descriptionBottom}>
@@ -107,7 +109,7 @@ export const FooterCTA: React.FC = () => {
 
           <div className={styles.sideCardRight}>
             <div className={styles.glassPanel}>
-              <h3 className={styles.glassPanel__title}>The key is approaching<br/>it intelligently</h3>
+              <h3 className={styles.glassPanel__title}>The key is approaching<br />it intelligently</h3>
               <div className={styles.glassPanel__list}>
                 <div className={styles.glassPanel__item}>Not chasing unrealistic standards</div>
                 <div className={styles.glassPanel__item}>Not trying to look like someone else</div>

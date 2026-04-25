@@ -15,12 +15,12 @@
   &__icon {
     @include flex(row, center, center);
 
-    width: 24px;
-    height: 24px;
+    width: $spacing-lg;
+    height: $spacing-lg;
     border-radius: 50%;
-    background-color: #8fa0a3;
+    background-color: $color-teal-light;
     color: $color-bg-primary;
-    font-size: 11px;
+    font-size: $font-size-xxs;
     font-weight: $font-weight-semibold;
     margin-bottom: $spacing-xl;
     flex-shrink: 0;
@@ -31,9 +31,9 @@
   }
 
   &--active {
-    background: linear-gradient(135deg, #9caaa8 0%, #768a8a 100%);
+    background: linear-gradient(135deg, $color-grad-analysis-start 0%, $color-grad-analysis-end 100%);
     border-color: transparent;
-    box-shadow: 0 10px 25px -5px rgba(118, 138, 138, 0.4);
+    box-shadow: 0 10px 25px -5px $color-shadow-primary;
 
     .featureCard__icon {
       background-color: rgba($color-bg-primary, 0.3);

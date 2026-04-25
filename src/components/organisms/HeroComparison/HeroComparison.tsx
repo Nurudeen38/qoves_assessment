@@ -42,11 +42,11 @@ export const HeroComparison: React.FC = () => {
         </div>
 
         <div className={styles.hero__imageBox}>
-          <Image width={430} height={580} src={IMAGES.patientBefore} alt="Before" className={styles.hero__image} />
+          <Image width={430} height={580} src={IMAGES.patientBefore} alt="Before" className={styles.hero__image} loading="lazy" />
         </div>
 
         <div className={styles.hero__imageBox}>
-          <Image width={430} height={580} src={IMAGES.patientAfter} alt="After" style={{ filter: "brightness(1.1) contrast(1.1)" }} className={styles.hero__image} />
+          <Image width={430} height={580} src={IMAGES.patientAfter} alt="After" style={{ filter: "brightness(1.1) contrast(1.1)" }} className={styles.hero__image} loading="lazy" />
         </div>
       </div>
 

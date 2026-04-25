@@ -17,35 +17,35 @@
 
   &__brand {
     display: inline-block;
-    font-size: 10px;
+    font-size: $font-size-xsm;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #9AAEB5; 
+    color: $color-teal-muted; 
     margin-bottom: $spacing-md;
-    padding: 6px 12px;
+    padding: $spacing-xs-sm $spacing-sm-md;
     border: 1px solid $color-border;
     border-radius: $radius-full;
     background-color: transparent;
   }
 
   &__title {
-    font-size: 42px !important;
+    font-size: $font-size-title !important;
     font-weight: 300 !important;
-    color: #2f3a3d !important; 
+    color: $color-slate-dark !important; 
     line-height: 1.2;
-    margin-bottom: 24px;
+    margin-bottom: $spacing-lg;
     letter-spacing: -0.01em;
   }
 
   &__titleAccent {
-    color: #8fa0a3;
+    color: $color-teal-light;
   }
 
   &__subtitle {
-    font-size: 16px !important;
+    font-size: $font-size-base !important;
     font-weight: 400 !important;
-    color: #5c6b6d !important;
+    color: $color-slate-muted !important;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -58,8 +58,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background: #fafafa;
-    border-radius: 12px;
+    background: $color-bg-alt;
+    border-radius: $spacing-sm-md;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
   }
 }
@@ -68,51 +68,51 @@
   border-bottom: 1px solid rgba($color-border, 0.6);
   margin-bottom: 0;
   transition: all 0.3s ease;
-  border-radius: 12px;
+  border-radius: $spacing-sm-md;
   
   &:last-child {
     border-bottom: none;
   }
 
   &--open {
-    background: linear-gradient(135deg, #a5b4ba 0%, #8ca1a6 100%);
+    background: linear-gradient(135deg, $color-grad-faq-start 0%, $color-grad-faq-end 100%);
     border-bottom: none;
     overflow: hidden;
     color: white;
   }
 
   &--open:not(:first-child) {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-top-left-radius: $spacing-sm-md;
+    border-top-right-radius: $spacing-sm-md;
   }
 
   &__header {
     width: 100%;
-    padding: 24px;
+    padding: $spacing-lg;
     @include flex(row, space-between, center);
     background: transparent;
     border: none;
     cursor: pointer;
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
-    color: #2f3a3d;
+    color: $color-slate-dark;
     transition: all 0.2s ease;
 
     .category--open & {
       color: white;
-      padding-bottom: 16px;
+      padding-bottom: $spacing-md;
     }
   }
 
   &__icon {
-    font-size: 24px;
+    font-size: $spacing-lg;
     font-weight: 300;
-    color: #8fa0a3;
+    color: $color-teal-light;
 
     .category--open & {
       color: white;
-      font-size: 24px;
+      font-size: $spacing-lg;
     }
   }
 
@@ -123,28 +123,28 @@
 }
 
 .questionList {
-  padding: 0 16px 16px 16px;
+  padding: 0 $spacing-md $spacing-md $spacing-md;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: $spacing-xs;
 }
 
 .question {
-  border-radius: 8px;
+  border-radius: $spacing-sm;
   background: transparent;
   transition: background 0.3s ease;
 
   &--open {
-    background: rgba(255, 255, 255, 0.15); // subtle highlight for open item
+    background: $color-bg-overlay-muted; // subtle highlight for open item
   }
 
   &__header {
     width: 100%;
     @include flex(row, space-between, center);
-    padding: 16px;
-    font-size: 15px;
+    padding: $spacing-md;
+    font-size: 0.9375rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
+    color: $color-bg-overlay;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -153,12 +153,12 @@
     .question--open & {
       color: white;
       font-weight: 500;
-      padding-bottom: 8px;
+      padding-bottom: $spacing-sm;
     }
   }
 
   &__icon {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: rgba(255, 255, 255, 0.7);
 
     .question--open & {
@@ -168,8 +168,8 @@
 
   &__content {
     overflow: hidden;
-    padding: 0 16px;
-    font-size: 14px;
+    padding: 0 $spacing-md;
+    font-size: $font-size-sm;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
     transition: all 0.3s ease;
