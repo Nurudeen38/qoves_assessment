@@ -64,13 +64,22 @@ export const FacialAnalysis: React.FC = () => {
       </p>
 
       <div className={styles.analysis__board}>
-        <Image
-          width={7000}
-          height={7000}
-          src={IMAGES.facialAnalysisFeatures}
-          alt="Facial Analysis Features Map"
-          className={styles.analysis__features}
-        />
+        <div className={styles.analysis__featuresWrapper}>
+          <Image
+            width={7000}
+            height={7000}
+            src={IMAGES.facialAnalysisFeatures}
+            alt="Facial Analysis Features Map"
+            className={`${styles.analysis__features} ${styles['analysis__features--desktop']}`}
+          />
+          <Image
+            width={7000}
+            height={2000}
+            src={IMAGES.facialAnalysisFeaturesMobile}
+            alt="Facial Analysis Features Map Mobile"
+            className={`${styles.analysis__features} ${styles['analysis__features--mobile']}`}
+          />
+        </div>
         <Image
           width={1000}
           height={1000}

@@ -1,13 +1,22 @@
-@use '@/src/styles/abstracts/variables' as *;
-@use '@/src/styles/abstracts/mixins' as *;
+@use "@/src/styles/abstracts/variables" as *;
+@use "@/src/styles/abstracts/mixins" as *;
 
 .analysis {
   padding-top: 3.75rem; // 60px
   z-index: 3;
-  background: linear-gradient(180deg, $color-grad-analysis-start 0%, $color-grad-analysis-end 100%);
+  background: radial-gradient(
+    circle at 50% 40%,
+    #9a928d 0%,
+    #a5b2ba 35%,
+    rgba(154, 174, 181, 1) 100%
+  );
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1rem 0 1rem;
+  }
 
   &__badge {
     display: inline-block;
@@ -39,11 +48,17 @@
     color: rgba(255, 255, 255, 0.8) !important;
     line-height: 1.5;
     letter-spacing: -0.01em;
+
+    @media (max-width: 768px) {
+      margin-bottom: $spacing-3xl;
+    }
   }
 
   &__br {
     display: none;
-    @include respond-to('md') { display: block; }
+    @include respond-to("md") {
+      display: block;
+    }
   }
 
   &__board {
@@ -52,25 +67,45 @@
     margin: 0 auto;
     @include flex(column, flex-end, center);
     height: 500px;
-    
-    @include respond-to('md') {
+
+    @include respond-to("md") {
       height: 600px;
     }
   }
 
-  &__features {
+  &__featuresWrapper {
     position: absolute;
-    width: 120%;
-    max-width: 1200px;
-    top: 50%;
+    max-width: 1200px; // Wider on mobile to fit the cards nicely behind the portrait
+    width: 100%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    object-fit: contain;
+    overflow: hidden;
 
-    @include respond-to('md') {
+    @include respond-to("md") {
       width: 100%;
       top: 40%;
+    }
+  }
+
+  &__features {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    &--desktop {
+      display: none;
+      @include respond-to("md") {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      display: block;
+      @include respond-to("md") {
+        display: none;
+      }
     }
   }
 

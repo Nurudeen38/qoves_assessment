@@ -1,19 +1,24 @@
-@use '@/src/styles/abstracts/variables' as *;
-@use '@/src/styles/abstracts/mixins' as *;
+@use "@/src/styles/abstracts/variables" as *;
+@use "@/src/styles/abstracts/mixins" as *;
 
 .faq {
   position: relative;
   @include container;
-  padding-top: $spacing-6xl;
-  padding-bottom: $spacing-6xl;
   background-color: $color-bg-primary;
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+  padding-top: $spacing-2xl;
+  padding-bottom: $spacing-2xl;
+
+  @media (min-width: 768px) {
+    padding-top: $spacing-6xl;
+    padding-bottom: $spacing-6xl;
+  }
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -42,7 +47,7 @@
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: $color-teal-muted; 
+    color: $color-teal-muted;
     margin-bottom: $spacing-md;
     padding: $spacing-xs-sm $spacing-sm-md;
     border: 1px solid $color-border;
@@ -53,7 +58,7 @@
   &__title {
     font-size: $font-size-title !important;
     font-weight: 300 !important;
-    color: $color-slate-dark !important; 
+    color: $color-slate-dark !important;
     line-height: 1.2;
     margin-bottom: $spacing-lg;
     letter-spacing: -0.01em;
@@ -90,13 +95,17 @@
   margin-bottom: 0;
   transition: all 0.3s ease;
   border-radius: $spacing-sm-md;
-  
+
   &:last-child {
     border-bottom: none;
   }
 
   &--open {
-    background: linear-gradient(135deg, $color-grad-faq-start 0%, $color-grad-faq-end 100%);
+    background: linear-gradient(
+      135deg,
+      $color-grad-faq-start 0%,
+      $color-grad-faq-end 100%
+    );
     border-bottom: none;
     overflow: hidden;
     color: white;
@@ -139,7 +148,9 @@
 
   &__content {
     overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transition:
+      max-height 0.4s ease,
+      opacity 0.4s ease;
   }
 }
 
@@ -170,7 +181,7 @@
     border: none;
     cursor: pointer;
     text-align: left;
-    
+
     .question--open & {
       color: white;
       font-weight: 500;
