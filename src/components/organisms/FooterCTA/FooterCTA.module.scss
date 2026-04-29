@@ -1,5 +1,5 @@
-@use '@/src/styles/abstracts/variables' as *;
-@use '@/src/styles/abstracts/mixins' as *;
+@use "@/src/styles/abstracts/variables" as *;
+@use "@/src/styles/abstracts/mixins" as *;
 
 .footerCta {
   position: relative;
@@ -7,7 +7,7 @@
   overflow: hidden;
   color: white;
   z-index: 0;
-  
+
   &__topHalf {
     position: relative;
     width: 100%;
@@ -28,7 +28,11 @@
   &__topOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba($color-black, 0.5) 0%,
+      rgba($color-black, 0) 100%
+    );
     z-index: 1;
   }
 
@@ -36,25 +40,32 @@
     position: relative;
     z-index: 2;
     @include container;
+    height: 100%;
+    width: 100%;
+    padding-inline: 0px !important;
     max-width: 1020px !important;
     padding-top: $spacing-6xl;
-    padding-bottom: $spacing-4xl;
   }
 
   &__bottomHalf {
     position: relative;
     width: 100%;
     backdrop-filter: blur(28px);
-    background: linear-gradient(180deg, rgba(60, 50, 45, 0.4) 0%, rgba(30, 25, 20, 0.8) 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(
+      180deg,
+      rgba($color-footer-grad-1, 0.4) 0%,
+      rgba($color-footer-grad-2, 0.8) 100%
+    );
+    border-top: 1px solid rgba($color-bg-primary, 0.15);
   }
 
   &__contentBottom {
     position: relative;
-     max-width: 1020px !important;
+    max-width: 1020px !important;
     z-index: 2;
     @include container;
-    padding-top: $spacing-4xl;
+    padding-left: 0px !important;
+    padding-top: $spacing-2xl-md;
     padding-bottom: $spacing-6xl;
   }
 }
@@ -76,10 +87,10 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   padding: $spacing-xs $spacing-sm-md;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba($color-bg-primary, 0.3);
   border-radius: 1.25rem;
   margin-bottom: $spacing-lg;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba($color-bg-primary, 0.8);
 }
 
 .title {
@@ -90,34 +101,41 @@
 }
 
 .titleAccent {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba($color-bg-primary, 0.5);
 }
 
 .description {
   font-size: $font-size-base;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba($color-bg-primary, 0.85);
 }
 
 .featuresGrid {
   display: grid;
   grid-template-columns: 1fr;
   gap: $spacing-lg;
-  
-  @include respond-to('md') {
+  border-top: 1px solid rgba($color-bg-primary, 0.15);
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-lg;
+
+  @include respond-to("md") {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .featureCard {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba($color-bg-primary, 0.12) 0%,
+    rgba($color-bg-primary, 0.03) 100%
+  );
+  border: 1px solid rgba($color-bg-primary, 0.1);
   backdrop-filter: blur(24px);
   border-radius: $spacing-md;
-  padding: $spacing-xl;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  padding: $spacing-md;
+  box-shadow: 0 10px 40px rgba($color-black, 0.15);
   transition: transform 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-4px);
   }
@@ -128,8 +146,8 @@
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: $spacing-xl;
-    background: rgba(0,0,0,0.2); 
-    
+    background: rgba($color-black, 0.2);
+
     img {
       width: 100%;
       height: 100%;
@@ -145,7 +163,7 @@
 
   &__desc {
     font-size: $font-size-sm;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba($color-bg-primary, 0.6);
     line-height: 1.5;
   }
 }
@@ -153,7 +171,12 @@
 .divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba($color-bg-primary, 0.15),
+    transparent
+  );
   margin: $spacing-6xl 0;
 }
 
@@ -163,8 +186,8 @@
   flex-direction: column;
   gap: $spacing-3xl;
   position: relative;
-  
-  @include respond-to('md') {
+
+  @include respond-to("md") {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -178,7 +201,7 @@
   margin: 0 auto;
   z-index: 2;
 
-  @include respond-to('md') {
+  @include respond-to("md") {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -194,46 +217,51 @@
 }
 
 .titleAccentBottom {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba($color-bg-primary, 0.5);
   font-size: 3.25rem; // 52px Make "about your appearance" slightly larger as seen in design
 }
 
 .descriptionBottom {
   font-size: 0.8125rem; // 13px
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba($color-bg-primary, 0.65);
   max-width: 400px;
   margin: 0 auto;
 }
 
-.sideCardLeft, .sideCardRight {
+.sideCardLeft,
+.sideCardRight {
   z-index: 3;
   width: 100%;
-  @include respond-to('md') {
+  @include respond-to("md") {
     width: 340px;
   }
 }
 
 .sideCardLeft {
-  @include respond-to('md') {
+  @include respond-to("md") {
     align-self: flex-start;
   }
 }
 
 .sideCardRight {
-  @include respond-to('md') {
+  @include respond-to("md") {
     align-self: flex-end;
     margin-top: 180px; // Stagger effect
   }
 }
 
 .glassPanel {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba($color-bg-primary, 0.15) 0%,
+    rgba($color-bg-primary, 0.05) 100%
+  );
+  border: 1px solid rgba($color-bg-primary, 0.15);
   backdrop-filter: blur(28px);
   border-radius: $spacing-md;
   padding: $spacing-xl;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 40px rgba($color-black, 0.25);
 
   &__title {
     font-size: 1.5rem; // 24px
@@ -249,11 +277,11 @@
   }
 
   &__item {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba($color-bg-primary, 0.12);
     padding: $spacing-sm-md $spacing-md;
     border-radius: 6px;
     font-size: 0.8125rem; // 13px
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba($color-bg-primary, 0.85);
     line-height: 1.4;
     font-weight: 400;
   }

@@ -6,9 +6,9 @@
   z-index: 3;
   background: radial-gradient(
     circle at 50% 40%,
-    #9a928d 0%,
-    #a5b2ba 35%,
-    rgba(154, 174, 181, 1) 100%
+    $color-analysis-grad-1 0%,
+    $color-analysis-grad-2 35%,
+    $color-teal-muted 100%
   );
   text-align: center;
   position: relative;
@@ -20,14 +20,14 @@
 
   &__badge {
     display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba($color-bg-primary, 0.2);
     border-radius: $radius-full;
     padding: $spacing-xs-sm $spacing-md;
     font-size: $font-size-xxs;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba($color-bg-primary, 0.9);
   }
 
   &__title {
@@ -39,13 +39,13 @@
   }
 
   &__titleLight {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba($color-bg-primary, 0.6);
   }
 
   &__subtitle {
     font-size: $font-size-base !important;
     font-weight: 300 !important;
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba($color-bg-primary, 0.8) !important;
     line-height: 1.5;
     letter-spacing: -0.01em;
 
