@@ -12,6 +12,7 @@ $color-bg-gradient-start: #E1E8E8;
 $color-bg-gradient-end: #C7D2D0;
 $color-grad-faq-start: #a5b4ba;
 $color-grad-faq-end: #8ca1a6;
+$color-grad-comparison-start: #A37156;
 $color-grad-analysis-start: #9caaa8;
 $color-grad-analysis-end: #768a8a;
 $color-bg-overlay: rgba(255, 255, 255, 0.85);
@@ -28,8 +29,8 @@ $color-accent-hover: #6B8B87;
 $color-teal-muted: #9AAEB5;
 $color-teal-light: #8fa0a3;
 
-$color-border: #E5E7EB;
-$color-border-primary-muted: #F2F2F2;
+$color-border: #F2F2F2;
+$color-border-primary-muted: rgba(199, 209, 213, 0.3);
 $color-shadow-primary: rgba(118, 138, 138, 0.4);
 
 // Spacing
@@ -40,6 +41,7 @@ $spacing-sm-md: 0.75rem; // 12px
 $spacing-md: 1rem;
 $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
+$spacing-2xl-md: 2.5rem;
 $spacing-2xl: 3rem;
 $spacing-3xl: 4rem;
 $spacing-4xl: 6rem;

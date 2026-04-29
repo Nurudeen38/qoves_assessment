@@ -6,8 +6,8 @@
   text-align: left;
   padding: $spacing-md;
   background-color: $color-bg-primary;
-  border: 1px solid $color-border-primary-muted;
-  border-radius: $radius-lg;
+  border: 1px solid #D7E5EB;
+  border-radius: $radius-xl;
   width: 100%;
   min-height: 150px;
   transition: $transition-base;
@@ -31,8 +31,12 @@
   }
 
   &--active {
-    background: linear-gradient(135deg, $color-grad-analysis-start 0%, $color-grad-analysis-end 100%);
-    border-color: transparent;
+  background: linear-gradient(
+  90deg, 
+  rgba(#A37156,0.4) 0% ,   /* #A37156 at 100% opacity */
+  #9AAEB5 75% 100%     /* #000000 at 50% opacity */
+);
+
     box-shadow: 0 10px 25px -5px $color-shadow-primary;
 
     .featureCard__icon {

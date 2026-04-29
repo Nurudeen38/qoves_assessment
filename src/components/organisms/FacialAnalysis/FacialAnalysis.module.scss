@@ -3,6 +3,7 @@
 
 .analysis {
   padding-top: 3.75rem; // 60px
+  z-index: 3;
   background: linear-gradient(180deg, $color-grad-analysis-start 0%, $color-grad-analysis-end 100%);
   text-align: center;
   position: relative;

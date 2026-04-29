@@ -2,6 +2,7 @@
 @use '@/src/styles/abstracts/mixins' as *;
 
 .faq {
+  position: relative;
   @include container;
   padding-top: $spacing-6xl;
   padding-bottom: $spacing-6xl;
@@ -9,6 +10,26 @@
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: $color-border;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 120;
+  }
+
+  &::after {
+    bottom: 120;
+  }
 
   &__header {
     margin-bottom: $spacing-3xl;

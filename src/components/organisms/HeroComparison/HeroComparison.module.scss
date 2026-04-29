@@ -1,5 +1,5 @@
-@use '@/src/styles/abstracts/variables' as *;
-@use '@/src/styles/abstracts/mixins' as *;
+@use "@/src/styles/abstracts/variables" as *;
+@use "@/src/styles/abstracts/mixins" as *;
 
 .hero {
   @include container;
@@ -8,18 +8,39 @@
   text-align: center;
   background-color: $color-bg-primary;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &__brand {
     display: inline-block;
-    padding: $spacing-xs-sm $spacing-md;
-    font-size: $font-size-xxs;
+    padding: $spacing-xs-sm;
+    font-size: $font-size-xs;
+    font-family: "PP Neue Montreal";
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     letter-spacing: 0.15em; // Wide spacing
     color: $color-teal-muted; // Muted teal looking color from image
-    margin-bottom: $spacing-lg;
+    margin-bottom: $spacing-md;
     border: 2px solid $color-border-primary-muted;
     border-radius: $radius-full;
     background-color: transparent;
+  }
+
+  &__brandDefault {
+    display: inline;
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+      display: none;
+    }
+  }
+
+  &__brandTablet {
+    display: none;
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+      display: inline;
+    }
   }
 
   &__title {
@@ -35,8 +56,20 @@
     color: $color-teal-light; // The muted light teal for "Qoves plan"
   }
 
+  &__tm {
+    display: none;
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+      display: inline-block;
+      font-size: 0.4em;
+      vertical-align: super;
+      margin-left: 2px;
+      font-weight: 300;
+    }
+  }
+
   &__subtitle {
-    margin-bottom: $spacing-2xl !important;
+    margin-bottom: $spacing-2xl-md !important;
     font-size: 1.125rem !important; // 18px equivalent roughly
     font-weight: 300 !important;
     color: $color-slate-muted !important;
@@ -47,15 +80,24 @@
     letter-spacing: -0.01em;
   }
 
+  &__divider {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color: $color-border;
+  }
+
   &__comparison {
     position: relative;
     gap: $spacing-xl;
-    margin-bottom: $spacing-4xl;
+    margin-bottom: $spacing-sm;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 
-    @include respond-to('md') {
+    @include respond-to("md") {
       display: block; // Detach from flexbox
       max-width: 1012px; // Match exact SVG width
       aspect-ratio: 1012 / 414; // Match SVG viewBox
@@ -64,7 +106,7 @@
 
   &__comparisonSvgWrapper {
     display: none;
-    @include respond-to('md') {
+    @include respond-to("md") {
       display: block;
       position: absolute;
       inset: 0;
@@ -88,8 +130,12 @@
   }
 
   @keyframes traceSnake {
-    from { stroke-dashoffset: 4000; }
-    to { stroke-dashoffset: 0; }
+    from {
+      stroke-dashoffset: 4000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
   }
 
   &__imageBox {
@@ -98,28 +144,33 @@
     height: 380px;
     background-color: transparent;
     border-color: transparent;
-    border-radius: 1.25rem;
+    border-radius: $radius-xl;
     overflow: hidden;
     z-index: 2;
     padding: $spacing-sm 10px;
-    
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-       border-radius: 1.25rem;
+      border-radius: $radius-lg;
     }
 
-    @include respond-to('md') {
+    @media (max-width: 1440px) {
+      img {
+        width: 92%;
+      }
+    }
+    @include respond-to("md") {
       position: absolute;
       top: 2.898%; // Precisely 12px down in a 414px high viewBox
-      width:21.5rem; // Precisely 311px wide in a 1012px wide viewBox
+      width: 21.5rem; // Precisely 311px wide in a 1012px wide viewBox
       height: 94.396%; // Precisely 390.8px high in a 414px high viewBox
 
       &:nth-child(2) {
         left: 1%; // 28.5px in from left bound
       }
-      
+
       &:nth-child(3) {
         left: 65%; // 672.5px in from left bound
       }
@@ -127,13 +178,77 @@
   }
 
   &__features {
-    @include flex(column, space-between, flex-start);
+    position: relative;
+    @include flex(column, space-between, stretch);
     gap: $spacing-md;
-    margin-left:102px;
-    margin-right:102px;
-    @include respond-to('md') {
+    margin-bottom: 2rem;
+    padding-top: $spacing-md;
+    margin-left: 110px;
+    margin-right: 110px;
+    padding-bottom: $spacing-md;
+
+    @media (max-width: 1440px) {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 1px;
+      background-color: $color-border;
+      z-index: 1;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    @include respond-to("md") {
       flex-direction: row;
-      gap: $spacing-xl;
+      gap: 0;
+    }
+  }
+
+  &__featureWrapper {
+    flex: 1;
+    position: relative;
+    width: 100%;
+
+    @include respond-to("md") {
+      padding: 0 ($spacing-xl / 2);
+      display: flex;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -$spacing-md;
+        bottom: -$spacing-md;
+        width: 1px;
+        background-color: $color-border;
+        z-index: 1;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
     }
   }
 }

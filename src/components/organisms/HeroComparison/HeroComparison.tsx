@@ -24,14 +24,19 @@ export const HeroComparison: React.FC = () => {
 
   return (
     <section className={styles.hero} ref={containerRef}>
-      <p className={styles.hero__brand}>Personalised Analysis</p>
+      <p className={styles.hero__brand}>
+        <span className={styles.hero__brandDefault}>Personalized Analysis</span>
+        <span className={styles.hero__brandTablet}>Introducing</span>
+      </p>
       <Heading level={1} className={styles.hero__title}>
-        Get your personalised <span className={styles.hero__titleAccent}>Qoves plan</span>
+        Get your personalised <span className={styles.hero__titleAccent}>Qoves<sup className={styles.hero__tm}>TM</sup> plan</span>
       </Heading>
       <Text className={styles.hero__subtitle}>
         Understand your facial features and start your glow-up today
         with a proven action plan, no plastic surgery needed.
       </Text>
+
+      <div className={styles.hero__divider} />
 
       <div className={styles.hero__comparison}>
         <div className={styles.hero__comparisonSvgWrapper}>
@@ -51,10 +56,18 @@ export const HeroComparison: React.FC = () => {
       </div>
 
       <div className={styles.hero__features}>
-        <FeatureCard text="Get your expert facial analysis" number="1" />
-        <FeatureCard text="Visualise your best looking self" number="2" isActive={true} />
-        <FeatureCard text="Get your personalized glow-up protocol" number="3" />
-        <FeatureCard text="Track your progress and see dramatic results" number="4" />
+        <div className={styles.hero__featureWrapper}>
+          <FeatureCard text="Get your expert facial analysis" number="1" />
+        </div>
+        <div className={styles.hero__featureWrapper}>
+          <FeatureCard text="Visualise your best looking self" number="2" isActive={true} />
+        </div>
+        <div className={styles.hero__featureWrapper}>
+          <FeatureCard text="Get your personalized glow-up protocol" number="3" />
+        </div>
+        <div className={styles.hero__featureWrapper}>
+          <FeatureCard text="Track your progress and see dramatic results" number="4" />
+        </div>
       </div>
     </section>
   );
