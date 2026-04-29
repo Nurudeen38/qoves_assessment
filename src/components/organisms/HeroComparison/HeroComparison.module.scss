@@ -123,20 +123,6 @@
     object-fit: contain;
   }
 
-  &__comparisonSnake {
-    stroke-dasharray: 200 4000;
-    stroke-linecap: round;
-    animation: traceSnake 12s linear infinite;
-  }
-
-  @keyframes traceSnake {
-    from {
-      stroke-dashoffset: 4000;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
 
   &__imageBox {
     position: relative;
