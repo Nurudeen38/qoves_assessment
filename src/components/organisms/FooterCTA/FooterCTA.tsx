@@ -49,16 +49,20 @@ export const FooterCTA: React.FC = () => {
         <div className={styles.footerCta__contentTop}>
           <div className={styles.topSection}>
             <div className={styles.introBlock}>
-              <span className={styles.badge}>INTRODUCING</span>
+              <span className={styles.badge}>BACKED BY 2000+ RESEARCH PAPERS</span>
               <h2 className={styles.title}>
                 Will analyzing my face <br />
-                <span className={styles.titleAccent}>Make me insecure?</span>
+                make me insecure?
               </h2>
               <p className={styles.description}>
-                Most insecurity comes from uncertainty-not knowing if your concerns
-                are real or imagined. When you're guessing about your appearance,
-                your mind often makes things seem worse than they are.
+                Get your personalized facial analysis and transformation plan based on 2000+ academic studies.
               </p>
+              <button className={styles.glowUpButton}>
+                Start your glow-up
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
             </div>
 
             <div className={styles.featuresGrid}>
@@ -95,17 +99,6 @@ export const FooterCTA: React.FC = () => {
         <div className={styles.footerCta__contentBottom}>
           <div className={styles.bottomSection}>
 
-            <div className={styles.sideCardLeft}>
-              <div className={styles.glassPanel}>
-                <h3 className={styles.glassPanel__title}>Consider this...</h3>
-                <div className={styles.glassPanel__list}>
-                  <div className={styles.glassPanel__item}>First impressions matter</div>
-                  <div className={styles.glassPanel__item}>It has a considerable impact on interpersonal interactions</div>
-                  <div className={styles.glassPanel__item}>Small improvements can drastically impact quality of life</div>
-                </div>
-              </div>
-            </div>
-
             <div className={styles.centerBlock}>
               <h2 className={styles.titleBottom}>
                 Is it vain to care <br />
@@ -116,14 +109,27 @@ export const FooterCTA: React.FC = () => {
               </p>
             </div>
 
-            <div className={styles.sideCardRight}>
-              <div className={styles.glassPanel}>
-                <h3 className={styles.glassPanel__title}>The key is approaching<br />it intelligently</h3>
-                <div className={styles.glassPanel__list}>
-                  <div className={styles.glassPanel__item}>Not chasing unrealistic standards</div>
-                  <div className={styles.glassPanel__item}>Not trying to look like someone else</div>
-                  <div className={styles.glassPanel__item}>Not seeking perfection</div>
-                  <div className={styles.glassPanel__item}>Aiming only for a better version of yourself</div>
+            <div className={styles.bottomCardsWrapper}>
+              <div className={styles.sideCardLeft}>
+                <div className={styles.glassPanel}>
+                  <h3 className={styles.glassPanel__title}>Consider this...</h3>
+                  <div className={styles.glassPanel__list}>
+                    <div className={styles.glassPanel__item}>First impressions matter</div>
+                    <div className={styles.glassPanel__item}>It has a considerable impact on interpersonal interactions</div>
+                    <div className={styles.glassPanel__item}>Small improvements can drastically impact quality of life</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.sideCardRight}>
+                <div className={styles.glassPanel}>
+                  <h3 className={styles.glassPanel__title}>The key is approaching<br />it intelligently</h3>
+                  <div className={styles.glassPanel__list}>
+                    <div className={styles.glassPanel__item}>Not chasing unrealistic standards</div>
+                    <div className={styles.glassPanel__item}>Not trying to look like someone else</div>
+                    <div className={styles.glassPanel__item}>Not seeking perfection</div>
+                    <div className={styles.glassPanel__item}>Aiming only for a better version of yourself</div>
+                  </div>
                 </div>
               </div>
             </div>

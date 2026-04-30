@@ -51,15 +51,17 @@
       border-bottom: 1px solid $color-border-grid;
     }
 
-    &:after {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 100vw;
-      background-color: $color-border-grid;
-      z-index: 4;
-      pointer-events: none;
-      bottom: 15.625rem;
+    @media (min-width: 768px) {
+      &:after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100vw;
+        background-color: $color-border-grid;
+        z-index: 4;
+        pointer-events: none;
+        bottom: 15.625rem;
+      }
     }
   }
 
@@ -127,6 +129,40 @@
 
 .introBlock {
   max-width: 31.25rem;
+
+  @media (max-width: 48rem) {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.glowUpButton {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  background: rgba($color-bg-primary, 0.2);
+  border: 1px solid rgba($color-bg-primary, 0.3);
+  backdrop-filter: blur(12px);
+  color: $color-bg-primary;
+  padding: $spacing-sm-md $spacing-lg;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: $spacing-lg;
+
+  &:hover {
+    background: rgba($color-bg-primary, 0.3);
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(4px);
+  }
 }
 
 .badge {
@@ -167,6 +203,22 @@
   @include respond-to("md") {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media (max-width: 48rem) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    padding-bottom: $spacing-md;
+    margin-left: -$spacing-md;
+    margin-right: -$spacing-md;
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+  }
 }
 
 .featureCard {
@@ -186,6 +238,12 @@
 
   &:hover {
     transform: translateY(-4px);
+  }
+
+  @media (max-width: 48rem) {
+    width: 17.5rem;
+    flex-shrink: 0;
+    scroll-snap-align: center;
   }
 
   @include respond-to("md") {
@@ -251,8 +309,38 @@
   @include respond-to("md") {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     min-height: 31.25rem;
+  }
+}
+
+.bottomCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3xl;
+  width: 100%;
+
+  @include respond-to("md") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  @media (max-width: 48rem) {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    margin-left: -$spacing-md;
+    margin-right: -$spacing-md;
+    padding-left: $spacing-md;
+    padding-right: $spacing-md;
+    gap: $spacing-lg;
   }
 }
 
@@ -296,6 +384,12 @@
   width: 100%;
   @include respond-to("md") {
     width: 21.25rem;
+  }
+
+  @media (max-width: 48rem) {
+    width: 18.75rem;
+    flex-shrink: 0;
+    scroll-snap-align: center;
   }
 }
 
@@ -345,5 +439,9 @@
     color: rgba($color-bg-primary, 0.85);
     line-height: 1.4;
     font-weight: 400;
+  }
+
+  @media (max-width: 48rem) {
+    height: -webkit-fill-available;
   }
 }
