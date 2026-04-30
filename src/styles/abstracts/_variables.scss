@@ -5,14 +5,14 @@ $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
 
 // Colors - Derived from Qoves aesthetic
-$color-bg-primary: #FFFFFF;
-$color-bg-secondary: #EAF0F0;
+$color-bg-primary: #ffffff;
+$color-bg-secondary: #eaf0f0;
 $color-bg-alt: #fafafa;
-$color-bg-gradient-start: #E1E8E8;
-$color-bg-gradient-end: #C7D2D0;
+$color-bg-gradient-start: #e1e8e8;
+$color-bg-gradient-end: #c7d2d0;
 $color-grad-faq-start: #a5b4ba;
 $color-grad-faq-end: #8ca1a6;
-$color-grad-comparison-start: #A37156;
+$color-grad-comparison-start: #a37156;
 $color-grad-analysis-start: #9caaa8;
 $color-grad-analysis-end: #768a8a;
 $color-analysis-grad-1: #9a928d;
@@ -22,20 +22,21 @@ $color-footer-grad-2: #1e1914;
 $color-bg-overlay: rgba(255, 255, 255, 0.85);
 $color-bg-overlay-muted: rgba(255, 255, 255, 0.15);
 
-$color-text-primary: #1F2937;
-$color-text-secondary: #4B5563;
-$color-text-muted: #9CA3AF;
+$color-text-primary: #1f2937;
+$color-text-secondary: #4b5563;
+$color-text-muted: #9ca3af;
 $color-black: #000000;
 $color-slate-dark: #2f3a3d;
 $color-slate-muted: #5c6b6d;
 
-$color-accent: #7D9A96; // The muted sage/teal color
-$color-accent-hover: #6B8B87;
-$color-teal-muted: #9AAEB5;
+$color-accent: #7d9a96; // The muted sage/teal color
+$color-accent-hover: #6b8b87;
+$color-teal-muted: #9aaeb5;
 $color-teal-light: #8fa0a3;
 
-$color-border: #F2F2F2;
-$color-border-feature: #D7E5EB;
+$color-border: #f2f2f2;
+$color-border-grid: rgba(242, 242, 242, 0.2);
+$color-border-feature: #d7e5eb;
 $color-border-primary-muted: rgba(199, 209, 213, 0.3);
 $color-shadow-primary: rgba(118, 138, 138, 0.4);
 
@@ -54,8 +55,8 @@ $spacing-4xl: 6rem;
 $spacing-6xl: 10rem;
 
 // Typography (scaling based on rems)
-$font-family-sans:"PP Neue Montreal", Helvetica, sans-serif;
-$font-family-mono:"Zagma Mono", monospace;
+$font-family-sans: "PP Neue Montreal", Helvetica, sans-serif;
+$font-family-mono: "Zagma Mono", monospace;
 
 $font-size-xsm: 0.625rem; // 10px
 $font-size-xxs: 0.6875rem; // 11px

@@ -6,7 +6,11 @@ import styles from '@/src/components/organisms/HeroComparison/HeroComparison.mod
 import { Heading, Text } from '@/src/components/atoms/Typography/Typography';
 import { FeatureCard } from '@/src/components/molecules/FeatureCard/FeatureCard';
 import { useGsapAnimations } from '@/src/hooks/useGsapAnimations';
-import { IMAGES } from '@/src/constants/images';
+
+
+// utilized static import for blur functionality inference
+import patientBefore from "@/public/assets/images/qoves_patient_before.png"
+import patientAfter from "@/public/assets/images/qoves_patient_after.png"
 
 export const HeroComparison: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -51,11 +55,11 @@ export const HeroComparison: React.FC = () => {
         </div>
 
         <div className={styles.hero__imageBox}>
-          <Image width={430} height={580} src={IMAGES.patientBefore} alt="Before" className={styles.hero__image} loading="eager" priority />
+          <Image width={430} height={580} src={patientBefore} alt="Before" className={styles.hero__image} loading="eager" priority placeholder="blur" />
         </div>
 
         <div className={styles.hero__imageBox}>
-          <Image width={430} height={580} src={IMAGES.patientAfter} alt="After" style={{ filter: "brightness(1.1) contrast(1.1)" }} className={styles.hero__image} loading="eager" priority />
+          <Image width={430} height={580} src={patientAfter} alt="After" style={{ filter: "brightness(1.1) contrast(1.1)" }} className={styles.hero__image} loading="eager" priority placeholder="blur" />
         </div>
       </div>
 

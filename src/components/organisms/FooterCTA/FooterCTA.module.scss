@@ -6,13 +6,61 @@
   width: 100%;
   overflow: hidden;
   color: white;
-  z-index: 0;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    &::before,
+    &::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: $color-border-grid;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    &::before {
+      left: 230px;
+    }
+
+    &::after {
+      right: 235px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1440px) {
+    &::before {
+      left: 20px;
+    }
+
+    &::after {
+      right: 20px;
+    }
+  }
 
   &__topHalf {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include respond-to("md") {
+      border-bottom: 1px solid $color-border-grid;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      background-color: $color-border-grid;
+      z-index: 4;
+      pointer-events: none;
+      bottom: 250px;
+    }
   }
 
   &__bgVideo {
@@ -56,7 +104,6 @@
       rgba($color-footer-grad-1, 0.4) 0%,
       rgba($color-footer-grad-2, 0.8) 100%
     );
-    border-top: 1px solid rgba($color-bg-primary, 0.15);
   }
 
   &__contentBottom {
@@ -115,9 +162,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: $spacing-lg;
-  border-top: 1px solid rgba($color-bg-primary, 0.15);
-  padding-top: $spacing-lg;
-  padding-bottom: $spacing-lg;
+  position: relative;
 
   @include respond-to("md") {
     grid-template-columns: repeat(3, 1fr);
@@ -130,6 +175,8 @@
     rgba($color-bg-primary, 0.12) 0%,
     rgba($color-bg-primary, 0.03) 100%
   );
+  margin-top: $spacing-md;
+  margin-bottom: $spacing-md;
   border: 1px solid rgba($color-bg-primary, 0.1);
   backdrop-filter: blur(24px);
   border-radius: $spacing-md;
@@ -139,6 +186,19 @@
 
   &:hover {
     transform: translateY(-4px);
+  }
+
+  @include respond-to("md") {
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: -16px;
+      bottom: -16px;
+      right: calc(-1 * #{$spacing-lg} / 2);
+      width: 1px;
+      background: $color-border-grid;
+      pointer-events: none;
+    }
   }
 
   &__imgWrapper {
