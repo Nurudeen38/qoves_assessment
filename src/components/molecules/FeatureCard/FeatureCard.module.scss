@@ -9,7 +9,7 @@
   border: 1px solid $color-border-feature;
   border-radius: $radius-xl;
   width: 100%;
-  min-height: 150px;
+  min-height: 9.375rem;
   transition: $transition-base;
   
   &__icon {
@@ -37,7 +37,7 @@
   $color-teal-muted 75% 100%
 );
 
-    box-shadow: 0 10px 25px -5px $color-shadow-primary;
+    box-shadow: 0 0.625rem 1.5625rem -0.3125rem $color-shadow-primary;
 
     .featureCard__icon {
       background-color: rgba($color-bg-primary, 0.3);

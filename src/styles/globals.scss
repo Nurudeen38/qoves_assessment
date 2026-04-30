@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   position: relative;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     &::before,
     &::after {
       content: "";
@@ -36,22 +36,22 @@ body {
       pointer-events: none;
     }
   }
-  @media (min-width: 1440px) and (max-width: 1920px) {
+  @media (min-width: 90rem) and (max-width: 120rem) {
     &::before {
-      left: 230px;
+      left: 14.375rem;
     }
 
     &::after {
-      right: 235px;
+      right: 14.6875rem;
     }
   }
-  @media (min-width: 768px) and (max-width: 1440px) {
+  @media (min-width: 48rem) and (max-width: 90rem) {
     &::before {
-      left: 20px;
+      left: 1.25rem;
     }
 
     &::after {
-      right: 20px;
+      right: 1.25rem;
     }
   }
 }

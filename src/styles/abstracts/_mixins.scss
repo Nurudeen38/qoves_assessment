@@ -29,7 +29,7 @@
 // Standard Container
 @mixin container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: $spacing-md;

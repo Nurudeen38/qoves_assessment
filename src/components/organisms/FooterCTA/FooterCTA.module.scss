@@ -8,7 +8,7 @@
   color: white;
   z-index: 2;
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     &::before,
     &::after {
       content: "";
@@ -22,22 +22,22 @@
     }
   }
 
-  @media (min-width: 1440px) and (max-width: 1920px) {
+  @media (min-width: 90rem) and (max-width: 120rem) {
     &::before {
-      left: 230px;
+      left: 14.375rem;
     }
 
     &::after {
-      right: 235px;
+      right: 14.6875rem;
     }
   }
-  @media (min-width: 768px) and (max-width: 1440px) {
+  @media (min-width: 48rem) and (max-width: 90rem) {
     &::before {
-      left: 20px;
+      left: 1.25rem;
     }
 
     &::after {
-      right: 20px;
+      right: 1.25rem;
     }
   }
 
@@ -59,7 +59,7 @@
       background-color: $color-border-grid;
       z-index: 4;
       pointer-events: none;
-      bottom: 250px;
+      bottom: 15.625rem;
     }
   }
 
@@ -91,7 +91,7 @@
     height: 100%;
     width: 100%;
     padding-inline: 0px !important;
-    max-width: 1020px !important;
+    max-width: 63.75rem !important;
     padding-top: $spacing-6xl;
   }
 
@@ -108,7 +108,7 @@
 
   &__contentBottom {
     position: relative;
-    max-width: 1020px !important;
+    max-width: 63.75rem !important;
     z-index: 2;
     @include container;
     padding-left: 0px !important;
@@ -126,7 +126,7 @@
 }
 
 .introBlock {
-  max-width: 500px;
+  max-width: 31.25rem;
 }
 
 .badge {
@@ -192,8 +192,8 @@
     &:not(:last-child)::after {
       content: "";
       position: absolute;
-      top: -16px;
-      bottom: -16px;
+      top: -1rem;
+      bottom: -1rem;
       right: calc(-1 * #{$spacing-lg} / 2);
       width: 1px;
       background: $color-border-grid;
@@ -202,8 +202,8 @@
   }
 
   &__imgWrapper {
-    width: 100px;
-    height: 60px;
+    width: 6.25rem;
+    height: 3.75rem;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: $spacing-xl;
@@ -252,13 +252,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    min-height: 500px;
+    min-height: 31.25rem;
   }
 }
 
 .centerBlock {
   text-align: center;
-  max-width: 440px;
+  max-width: 27.5rem;
   margin: 0 auto;
   z-index: 2;
 
@@ -286,7 +286,7 @@
   font-size: 0.8125rem; // 13px
   line-height: 1.6;
   color: rgba($color-bg-primary, 0.65);
-  max-width: 400px;
+  max-width: 25rem;
   margin: 0 auto;
 }
 
@@ -295,7 +295,7 @@
   z-index: 3;
   width: 100%;
   @include respond-to("md") {
-    width: 340px;
+    width: 21.25rem;
   }
 }
 
@@ -308,7 +308,7 @@
 .sideCardRight {
   @include respond-to("md") {
     align-self: flex-end;
-    margin-top: 180px; // Stagger effect
+    margin-top: 11.25rem; // Stagger effect
   }
 }
 

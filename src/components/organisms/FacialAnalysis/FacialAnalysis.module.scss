@@ -14,7 +14,7 @@
   position: relative;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     padding: 1rem 1rem 0 1rem;
   }
 
@@ -49,7 +49,7 @@
     line-height: 1.5;
     letter-spacing: -0.01em;
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
       margin-bottom: $spacing-3xl;
     }
   }
@@ -63,19 +63,19 @@
 
   &__board {
     position: relative;
-    max-width: 1400px;
+    max-width: 87.5rem;
     margin: 0 auto;
     @include flex(column, flex-end, center);
-    height: 500px;
+    height: 31.25rem;
 
     @include respond-to("md") {
-      height: 600px;
+      height: 37.5rem;
     }
   }
 
   &__featuresWrapper {
     position: absolute;
-    max-width: 1200px; // Wider on mobile to fit the cards nicely behind the portrait
+    max-width: 75rem; // Wider on mobile to fit the cards nicely behind the portrait
     width: 100%;
     top: 45%;
     left: 50%;

@@ -8,7 +8,7 @@
   text-align: center;
   background-color: $color-bg-primary;
 
-  @media (max-width: 768px) {
+  @media (max-width: 48rem) {
     display: none;
   }
 
@@ -22,7 +22,7 @@
     letter-spacing: 0.15em; // Wide spacing
     color: $color-teal-muted; // Muted teal looking color from image
     margin-bottom: $spacing-md;
-    border: 2px solid $color-border-primary-muted;
+    border: 0.125rem solid $color-border-primary-muted;
     border-radius: $radius-full;
     background-color: transparent;
   }
@@ -30,7 +30,7 @@
   &__brandDefault {
     display: inline;
 
-    @media (min-width: 768px) and (max-width: 1440px) {
+    @media (min-width: 48rem) and (max-width: 90rem) {
       display: none;
     }
   }
@@ -38,7 +38,7 @@
   &__brandTablet {
     display: none;
 
-    @media (min-width: 768px) and (max-width: 1440px) {
+    @media (min-width: 48rem) and (max-width: 90rem) {
       display: inline;
     }
   }
@@ -59,11 +59,11 @@
   &__tm {
     display: none;
 
-    @media (min-width: 768px) and (max-width: 1440px) {
+    @media (min-width: 48rem) and (max-width: 90rem) {
       display: inline-block;
       font-size: 0.4em;
       vertical-align: super;
-      margin-left: 2px;
+      margin-left: 0.125rem;
       font-weight: 300;
     }
   }
@@ -73,7 +73,7 @@
     font-size: 1.125rem !important; // 18px equivalent roughly
     font-weight: 300 !important;
     color: $color-slate-muted !important;
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
@@ -99,7 +99,7 @@
 
     @include respond-to("md") {
       display: block; // Detach from flexbox
-      max-width: 1012px; // Match exact SVG width
+      max-width: 63.25rem; // Match exact SVG width
       aspect-ratio: 1012 / 414; // Match SVG viewBox
     }
   }
@@ -125,14 +125,14 @@
 
   &__imageBox {
     position: relative;
-    width: 280px;
-    height: 380px;
+    width: 17.5rem;
+    height: 23.75rem;
     background-color: transparent;
     border-color: transparent;
     border-radius: $radius-xl;
     overflow: hidden;
     z-index: 2;
-    padding: $spacing-sm 10px;
+    padding: $spacing-sm 0.625rem;
 
     img {
       width: 100%;
@@ -141,7 +141,7 @@
       border-radius: $radius-lg;
     }
 
-    @media (max-width: 1440px) {
+    @media (max-width: 90rem) {
       img {
         width: 92%;
       }
@@ -168,11 +168,11 @@
     gap: $spacing-md;
     margin-bottom: 2rem;
     padding-top: $spacing-md;
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 6.875rem;
+    margin-right: 6.875rem;
     padding-bottom: $spacing-md;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 90rem) {
       margin-left: 0.5rem;
       margin-right: 0.5rem;
     }
