@@ -182,6 +182,7 @@
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: $spacing-md;
+  text-wrap-style: balance;
 }
 
 .titleAccent {
@@ -277,7 +278,7 @@
   }
 
   &__title {
-    font-size: 1.25rem; // 20px
+    font-size: $font-size-xl; // 20px
     font-weight: 400;
     margin-bottom: $spacing-xs;
   }
@@ -362,7 +363,7 @@
 }
 
 .titleBottom {
-  font-size: 2.75rem; // 44px
+  font-size: $font-size-title; // 44px
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: $spacing-md;
@@ -370,11 +371,11 @@
 
 .titleAccentBottom {
   color: rgba($color-bg-primary, 0.5);
-  font-size: 3.25rem; // 52px Make "about your appearance" slightly larger as seen in design
+  font-size: $font-size-hero; // 52px Make "about your appearance" slightly larger as seen in design
 }
 
 .descriptionBottom {
-  font-size: 0.8125rem; // 13px
+  font-size: $font-size-sm; // 13px
   line-height: 1.6;
   color: rgba($color-bg-primary, 0.65);
   max-width: 25rem;
@@ -432,7 +433,7 @@
   box-shadow: 0 20px 40px rgba($color-black, 0.25);
 
   &__title {
-    font-size: 1.5rem; // 24px
+    font-size: $font-size-2xl; // 24px
     font-weight: 400;
     margin-bottom: 184px;
     line-height: 1.2;
@@ -452,7 +453,7 @@
     background: rgba($color-bg-primary, 0.12);
     padding: $spacing-sm-md $spacing-md;
     border-radius: 6px;
-    font-size: 0.8125rem; // 13px
+    font-size: $font-size-sm; // 13px
     color: rgba($color-bg-primary, 0.85);
     line-height: 1.4;
     font-weight: 400;

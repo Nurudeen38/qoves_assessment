@@ -124,7 +124,7 @@
     border: none;
     cursor: pointer;
     text-align: left;
-    font-size: 1.125rem;
+    font-size: $font-size-lg;
     font-weight: 500;
     color: $color-slate-dark;
     transition: all 0.2s ease;
@@ -136,13 +136,13 @@
   }
 
   &__icon {
-    font-size: $spacing-lg;
+    font-size: $font-size-2xl;
     font-weight: 300;
     color: $color-teal-light;
 
     .category--open & {
       color: white;
-      font-size: $spacing-lg;
+      font-size: $font-size-2xl;
     }
   }
 
@@ -174,7 +174,7 @@
     width: 100%;
     @include flex(row, space-between, center);
     padding: $spacing-md;
-    font-size: 0.9375rem;
+    font-size: $font-size-base;
     font-weight: 400;
     color: $color-bg-overlay;
     background: transparent;
@@ -190,7 +190,7 @@
   }
 
   &__icon {
-    font-size: 1.125rem;
+    font-size: $font-size-lg;
     color: rgba($color-bg-primary, 0.7);
 
     .question--open & {

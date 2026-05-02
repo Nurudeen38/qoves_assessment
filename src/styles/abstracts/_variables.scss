@@ -58,19 +58,19 @@ $spacing-6xl: 10rem;
 $font-family-sans: "PP Neue Montreal", Helvetica, sans-serif;
 $font-family-mono: "Zagma Mono", monospace;
 
-$font-size-xsm: 0.625rem; // 10px
-$font-size-xxs: 0.6875rem; // 11px
-$font-size-xs: 0.75rem;
-$font-size-sm: 0.875rem;
-$font-size-base: 1rem;
-$font-size-lg: 1.125rem;
-$font-size-xl: 1.25rem;
-$font-size-2xl: 1.5rem;
-$font-size-3xl: 1.875rem;
-$font-size-4xl: 2.25rem;
-$font-size-title: 2.625rem; // 42px
-$font-size-5xl: 3rem;
-$font-size-hero: 3rem; // 48px
+$font-size-xsm: clamp(0.5rem, 0.5vw + 0.35rem, 0.625rem); // 10px
+$font-size-xxs: clamp(0.5625rem, 0.5vw + 0.4rem, 0.6875rem); // 11px
+$font-size-xs: clamp(0.625rem, 0.5vw + 0.5rem, 0.75rem); // 12px
+$font-size-sm: clamp(0.75rem, 1vw + 0.5rem, 0.875rem); // 14px
+$font-size-base: clamp(0.875rem, 1vw + 0.625rem, 1rem); // 16px
+$font-size-lg: clamp(1rem, 1.5vw + 0.625rem, 1.125rem); // 18px
+$font-size-xl: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem); // 20px
+$font-size-2xl: clamp(1.25rem, 2vw + 0.75rem, 1.5rem); // 24px
+$font-size-3xl: clamp(1.5rem, 2.5vw + 0.875rem, 1.875rem); // 30px
+$font-size-4xl: clamp(1.75rem, 3vw + 1rem, 2.25rem); // 36px
+$font-size-title: clamp(2rem, 3.5vw + 1.125rem, 2.625rem); // 42px
+$font-size-5xl: clamp(2.25rem, 4vw + 1.25rem, 3rem); // 48px
+$font-size-hero: clamp(2.5rem, 4.5vw + 1.25rem, 3.5rem); // Scaled hero to allow a bit more room
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;

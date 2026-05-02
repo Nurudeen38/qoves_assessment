@@ -70,7 +70,7 @@
 
   &__subtitle {
     margin-bottom: $spacing-2xl-md !important;
-    font-size: 1.125rem !important; // 18px equivalent roughly
+    font-size: $font-size-lg !important; // 18px equivalent roughly
     font-weight: 300 !important;
     color: $color-slate-muted !important;
     max-width: 37.5rem;
